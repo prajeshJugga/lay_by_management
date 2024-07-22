@@ -17,9 +17,11 @@ class Validator:
             return True
         return False
 	
-    def is_cell_number_valid(self, cell_number: str) -> bool:
-        validate_phone_number_pattern = "^\\+?[1-9][0-9]{7,14}$"
-        match = re.match(validate_phone_number_pattern, cell_number) 
-        if match != None:
-            return True
-        return False
+    def is_cell_number_valid(self, cell_number: str | None) -> bool:
+        if cell_number == None:
+            return False
+        # validate_phone_number_pattern = "^\\+?[1-9][0-9]{7,14}$"
+        # match = re.match(validate_phone_number_pattern, cell_number) 
+        # if match != None:
+        #     return True
+        return True
